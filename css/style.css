@@ -1,0 +1,115 @@
+/* Sticky smooth effect */
+.main-header {
+  transition: all 0.3s ease;
+  z-index: 999;
+}
+
+/* Menu underline animation */
+.nav-link {
+  position: relative;
+  color: #fff !important;
+  font-weight: 500;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0;
+  height: 3px;
+  background: #00e5ff;
+  transition: width 0.3s ease;
+  border-radius: 5px;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+/* Dark mode */
+.dark-theme {
+  background-color: #121212;
+  color: #fff;
+}
+
+.dark-theme .navbar {
+  background: #1e1e1e !important;
+}
+
+.dark-mode {
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+}
+
+.title {
+  color: #fff;
+  font-size: 42px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  animation: fadeDown 1.2s ease;
+}
+
+.title i {
+  color: #00e5ff;
+  font-size: 46px;
+}
+
+/* Underline animation */
+.underline {
+  width: 0;
+  height: 4px;
+  background: #00e5ff;
+  margin: auto;
+  border-radius: 10px;
+  animation: lineGrow 1.2s ease forwards;
+}
+
+@keyframes lineGrow {
+  to { width: 140px; }
+}
+
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* CARD ANIMATION */
+.card {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  animation: fadeUp 1.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-12px) scale(1.03);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.dark-theme {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+.dark-theme .card {
+  background-color: #1e1e1e;
+  color: #ffffff;
+}
+
